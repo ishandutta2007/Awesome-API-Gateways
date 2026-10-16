@@ -40,67 +40,18 @@ Contributions welcome! Open a PR to add/update entries. Keep descriptions factua
 
 
 
-## SaaS/Hosted Platforms
-
-
-
-- **[Apigee (Google Cloud)](https://cloud.google.com/apigee)**
-
-  **Google's full-lifecycle API management platform** . **API proxies** map public HTTP endpoints to backend services—handling security, authorization, analytics, and monitoring without backend changes . **Apigee hybrid** runs runtime plane on-premises while management plane runs in Google Cloud—**API traffic and data confined within enterprise boundaries** . **Supports gRPC**, **KVMs for configuration**, **monetization**, and **Trace/Debug sessions** . **The enterprise standard** for regulated industries requiring data residency. **Note**: Reported as **69x more expensive than Kong** for equivalent scale .
-
-
-
-- **[Kong Konnect](https://konghq.com/products/kong-konnect)**
-
-  **Managed control plane for Kong Gateway deployments** . Service catalog, developer portal, runtime manager, and analytics . **Deploy gateways in any cloud or on-prem while managing centrally from Konnect** . **Advanced plugins like OpenID Connect are Enterprise-only** . **100+ plugins** for authentication, rate limiting, and transformation .
-
-
-
-- **[MuleSoft Anypoint Platform](https://www.mulesoft.com/platform/anypoint-platform)**
-
-  **Unified platform for API management and integration** . **API Designer, Anypoint Exchange for reusable assets, API Manager for policies and SLAs**, and **Anypoint Monitoring** . Combines **API-led connectivity with iPaaS capabilities** for connecting SaaS, on-prem, and custom applications .
-
-
-
-- **[Tyk API Management](https://tyk.io/)**
-
-  **Full lifecycle API management platform with gateway, dashboard, developer portal, and analytics** . **No feature lockout**—same gateway used for all applications . **Supports REST, GraphQL, TCP, and gRPC** . **OpenAPI 3.0 as source of truth** . **Multi-cloud deployment** with plugin extensibility (JavaScript, Go, gRPC) .
-
-
-
-- **[WSO2 API Manager](https://wso2.com/api-manager/)**
-
-  **Open-source-based API management platform with commercial support** . **API Publisher, Developer Portal, Gateway, and Analytics** . **Supports REST, GraphQL, WebSocket, and streaming APIs** . **Kubernetes deployment option** . **The most mature open-source-heritage commercial API manager** .
-
-
-
-- **[Postman](https://www.postman.com/)**
-
-  **The most widely adopted API platform** with collections, workspaces, mock servers, and automated testing . **API documentation generation**, **public API network**, and **team collaboration** . **The industry default** for API exploration and development—not a runtime gateway, but essential to the API lifecycle .
-
-
-
-- **[Boomi](https://boomi.com/)**
-
-  **Integration platform as a service (iPaaS) with API management** . **Acquired Rivery (December 2024)** —now offers cloud-native ELT alongside integration and API management . **No-code interface** with hundreds of prebuilt connectors .
-
-
-
-- **[Software AG webMethods](https://www.softwareag.com/)**
-
-  **Enterprise integration and API management platform** . **API Gateway, API Portal, and microservices runtime** . **Deep integration with enterprise systems** and **legacy modernization capabilities** .
-
-
-
-- **[IBM API Connect](https://www.ibm.com/products/api-connect)**
-
-  **Enterprise API management with design, security, and analytics** . **API Designer, Manager, and Portal** . **Supports both cloud and on-prem deployment** . **Deep integration with IBM Cloud Pak and IBM ecosystem** .
-
-
-
-- **[Axway](https://www.axway.com/)**
-
-  **API management and integration platform** . **API Gateway, API Portal, and Amplify platform** . **Focus on regulated industries** including financial services and healthcare .
+| Platform | Parent Company / Company Size (Revenue / Valuation) | Pricing (Starting Tier) | Free Tier Limits / Free Trial | Description |
+| :--- | :--- | :--- | :--- | :--- |
+| **[Apigee](https://cloud.google.com/apigee)** | Google / Alphabet (~$4.2T Market Cap / ~$350B+ Rev) | Pay-as-you-go starts at ~$365/mo per active Base environment + $20 per 1M standard API calls | 60-day free evaluation tier with up to $300 Google Cloud credits | Google's enterprise full-lifecycle API management platform. API proxies handle security, authorization, analytics, and monitoring; supports Apigee hybrid and gRPC. |
+| **[IBM API Connect](https://www.ibm.com/products/api-connect)** | IBM (~$275B Market Cap / ~$62B Rev) | Reserved/Standard SaaS tiers starting at ~$83/mo ($996/yr) for entry volume bundles | 30-day free trial limited to 1 service instance and 100,000 API calls | Enterprise API management platform covering design, security, and analytics with deep IBM Cloud Pak and AWS Marketplace integration. |
+| **[MuleSoft Anypoint Platform](https://www.mulesoft.com/platform/anypoint-platform)** | Salesforce (~$250B Market Cap / ~$35B Rev; acquired for $6.5B) | Subscription packages starting at ~$2,000/mo ($24,000/yr) based on Mule Credits / Flow & Message capacity | 30-day free trial providing sandbox access to Anypoint Platform and core design tools | Unified API management and iPaaS integration suite combining API-led connectivity with prebuilt connectors and Anypoint Exchange. |
+| **[Software AG webMethods](https://www.softwareag.com/)** | IBM / Silver Lake (~$2.6B Valuation; ~$1B Rev; acquired by IBM) | Standard enterprise integration & API SaaS tiers starting at ~$2,565/mo | Request-based PoC/eval environment (legacy 30-day / 10k transactions free editions discontinued) | Enterprise integration and API management platform with API Gateway, developer portal, and microservices runtime for legacy and cloud systems. |
+| **[Postman](https://www.postman.com/)** | Postman ($5.6B Valuation / ~$313M ARR) | Solo plan starting at $9/mo ($108/yr); Team plan at $19/user/mo ($228/user/yr) | Free forever plan for 1 user: unlimited collection runs & mock servers, 1,000 monitoring requests/mo, and 50 Postbot AI credits/mo | Industry-standard API development, mock server, automated testing, and collaborative documentation platform. |
+| **[Boomi](https://boomi.com/)** | Francisco Partners & TPG ($4B Valuation / ~$500M ARR) | Pay-As-You-Go starting at $99/mo base + ~$0.05/message; Pro annual contracts from ~$20,000/yr | 30-day free trial with sandbox access to Boomi Enterprise Platform integration and basic API management | Cloud-native iPaaS and API management platform offering no-code interface, prebuilt connectors, and ELT features. |
+| **[Kong Konnect](https://konghq.com/products/kong-konnect)** | Kong Inc. ($2.0B Valuation / ~$146M ARR) | Konnect Plus starting at $25/mo per control plane (includes 1M requests/mo; $200 per extra 1M requests) | 30-day free enterprise trial with unrestricted gateway limits; or open-source self-hosted Kong Gateway (free forever, Apache 2.0) | Managed cloud control plane for Kong Gateway deployments across multi-cloud and hybrid environments with 100+ plugins. |
+| **[Axway](https://www.axway.com/)** | Axway Software (~$1.3B Valuation [EURONEXT: AXW] / ~$805M Rev) | Tiered pricing based on usage, with entry runtime tiers starting from 1M transactions/mo | Custom demo and sales-arranged PoC environment upon request (no self-service free tier) | Enterprise API management, developer portal, and Amplify hybrid integration platform focused on heavily regulated industries. |
+| **[WSO2 API Manager](https://wso2.com/api-manager/)** | EQT Partners ($600M+ Acquisition Valuation / ~$100M ARR) | SaaS tiers starting at ~$85.80/mo (or ~$150/component/mo on Choreo cloud) | 30-day free trial limited to 5 managed APIs, 1M requests/mo, 1 portal, and 1 hybrid gateway | Open-source-origin API management platform supporting REST, GraphQL, WebSocket, streaming APIs, and Kubernetes ingress. |
+| **[Tyk API Management](https://tyk.io/)** | Tyk Technologies (~$150M-$250M Valuation / ~$18M ARR) | Tyk Cloud paid subscriptions quote-based starting at ~$600/mo (varies by gateway units & traffic) | 48-hour free trial of Tyk Cloud (no credit card required); or Tyk OSS Gateway (free forever, MPL 2.0 self-hosted) | Full lifecycle API management platform and gateway with REST, GraphQL, and gRPC support with no feature gating across gateways. |
 
 
 
