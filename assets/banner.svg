@@ -19,7 +19,7 @@
       <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="0.75" stroke-opacity="0.6" />
     </pattern>
 
-    <!-- Pure SVG Radial Gradients for Ambient Glows (No raster filters) -->
+    <!-- Pure SVG Radial Gradients for Ambient Lighting -->
     <radialGradient id="ambient-left" cx="50%" cy="50%" r="50%">
       <stop offset="0%" stop-color="#0284c7" stop-opacity="0.28" />
       <stop offset="100%" stop-color="#0284c7" stop-opacity="0" />
@@ -35,32 +35,26 @@
   </defs>
 
   <style>
-    /* Traffic Stream Vector Animations (100% vector-safe) */
+    /* Traffic Stream Vector Animations (cross-browser stroke-dashoffset) */
     .stream-line {
-      stroke-dasharray: 16 220;
+      stroke-dasharray: 20 220;
       animation: trafficFlow 6s linear infinite;
     }
     .stream-line-fast {
-      stroke-dasharray: 24 260;
+      stroke-dasharray: 28 260;
       animation: trafficFlow 4.5s linear infinite;
     }
     .stream-line-rev {
-      stroke-dasharray: 20 200;
+      stroke-dasharray: 24 200;
       animation: trafficFlowRev 5s linear infinite;
     }
 
-    /* Pulse Dots */
+    /* Pulse Dots (Universal cross-browser opacity animation) */
     .pulse-dot {
       animation: nodePulse 2.5s ease-in-out infinite alternate;
     }
     .pulse-dot-delayed {
       animation: nodePulse 3s ease-in-out 1.2s infinite alternate;
-    }
-
-    /* Expanding Pulse Rings */
-    .pulse-ring {
-      animation: ringExpand 3s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
-      transform-origin: center;
     }
 
     @keyframes trafficFlow {
@@ -72,12 +66,8 @@
       to { stroke-dashoffset: 0; }
     }
     @keyframes nodePulse {
-      0% { opacity: 0.35; }
+      0% { opacity: 0.3; }
       100% { opacity: 1; }
-    }
-    @keyframes ringExpand {
-      0% { r: 6px; opacity: 0.8; stroke-width: 2px; }
-      100% { r: 24px; opacity: 0; stroke-width: 0.5px; }
     }
 
     .badge-pill {
@@ -113,18 +103,34 @@
     <path d="M 840 215 C 980 215, 1040 285, 1200 285" fill="none" stroke="#1e293b" stroke-width="2" />
     <path d="M 840 215 C 980 215, 1040 285, 1200 285" fill="none" stroke="#38bdf8" stroke-width="2.5" class="stream-line-rev" stroke-linecap="round" />
 
-    <!-- Animated Circuit Pulse Rings -->
-    <circle cx="200" cy="75" r="6" fill="none" stroke="#38bdf8" class="pulse-ring" />
+    <!-- Gateway Circuit Nodes with Multi-Ring Pulses (Pure SMIL Animations for flawless cross-browser support) -->
+    <!-- Node 1: (200, 75) -->
     <circle cx="200" cy="75" r="4" fill="#38bdf8" class="pulse-dot" />
+    <circle cx="200" cy="75" r="5" fill="none" stroke="#38bdf8" stroke-width="1.5">
+      <animate attributeName="r" values="5;18" dur="2.4s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0.8;0" dur="2.4s" repeatCount="indefinite" />
+    </circle>
 
-    <circle cx="180" cy="285" r="6" fill="none" stroke="#818cf8" class="pulse-ring" />
+    <!-- Node 2: (180, 285) -->
     <circle cx="180" cy="285" r="4" fill="#818cf8" class="pulse-dot-delayed" />
+    <circle cx="180" cy="285" r="5" fill="none" stroke="#818cf8" stroke-width="1.5">
+      <animate attributeName="r" values="5;18" dur="2.4s" begin="0.8s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0.8;0" dur="2.4s" begin="0.8s" repeatCount="indefinite" />
+    </circle>
 
-    <circle cx="1020" cy="75" r="6" fill="none" stroke="#c084fc" class="pulse-ring" />
+    <!-- Node 3: (1020, 75) -->
     <circle cx="1020" cy="75" r="4" fill="#c084fc" class="pulse-dot" />
+    <circle cx="1020" cy="75" r="5" fill="none" stroke="#c084fc" stroke-width="1.5">
+      <animate attributeName="r" values="5;18" dur="2.4s" begin="1.2s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0.8;0" dur="2.4s" begin="1.2s" repeatCount="indefinite" />
+    </circle>
 
-    <circle cx="1040" cy="285" r="6" fill="none" stroke="#38bdf8" class="pulse-ring" />
+    <!-- Node 4: (1040, 285) -->
     <circle cx="1040" cy="285" r="4" fill="#38bdf8" class="pulse-dot-delayed" />
+    <circle cx="1040" cy="285" r="5" fill="none" stroke="#38bdf8" stroke-width="1.5">
+      <animate attributeName="r" values="5;18" dur="2.4s" begin="0.4s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0.8;0" dur="2.4s" begin="0.4s" repeatCount="indefinite" />
+    </circle>
 
     <!-- Central Routing Engine Status Pill -->
     <g transform="translate(520, 275)">
