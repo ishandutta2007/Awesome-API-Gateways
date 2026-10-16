@@ -1,197 +1,103 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" width="1200" height="360">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400" width="100%" height="100%">
   <defs>
     <!-- Background Gradient -->
-    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#070c18" />
-      <stop offset="50%" stop-color="#0c1527" />
-      <stop offset="100%" stop-color="#020617" />
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b0f19" />
+      <stop offset="50%" stop-color="#111827" />
+      <stop offset="100%" stop-color="#070a13" />
     </linearGradient>
 
-    <!-- Glowing Text Accent Gradient -->
-    <linearGradient id="primary-glow" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#38bdf8" />
-      <stop offset="50%" stop-color="#818cf8" />
-      <stop offset="100%" stop-color="#c084fc" />
+    <!-- Accent Gradients -->
+    <linearGradient id="primaryGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#06b6d4" />
+      <stop offset="50%" stop-color="#3b82f6" />
+      <stop offset="100%" stop-color="#8b5cf6" />
     </linearGradient>
 
-    <!-- Grid Pattern -->
-    <pattern id="cyber-grid" width="40" height="40" patternUnits="userSpaceOnUse">
-      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="0.75" stroke-opacity="0.6" />
-    </pattern>
+    <linearGradient id="glowGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06b6d4" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#8b5cf6" stop-opacity="0"/>
+    </linearGradient>
 
-    <!-- Pure SVG Radial Gradients for Ambient Lighting -->
-    <radialGradient id="ambient-left" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#0284c7" stop-opacity="0.28" />
-      <stop offset="100%" stop-color="#0284c7" stop-opacity="0" />
-    </radialGradient>
-    <radialGradient id="ambient-right" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#7c3aed" stop-opacity="0.25" />
-      <stop offset="100%" stop-color="#7c3aed" stop-opacity="0" />
-    </radialGradient>
-    <radialGradient id="ambient-center" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.12" />
-      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0" />
-    </radialGradient>
+    <!-- Filters for Glow Effects -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="15" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="40" result="blur" />
+    </filter>
   </defs>
 
-  <style>
-    /* Traffic Stream Vector Animations (cross-browser stroke-dashoffset) */
-    .stream-line {
-      stroke-dasharray: 20 220;
-      animation: trafficFlow 6s linear infinite;
-    }
-    .stream-line-fast {
-      stroke-dasharray: 28 260;
-      animation: trafficFlow 4.5s linear infinite;
-    }
-    .stream-line-rev {
-      stroke-dasharray: 24 200;
-      animation: trafficFlowRev 5s linear infinite;
-    }
+  <!-- Background -->
+  <rect width="1200" height="400" fill="url(#bgGrad)" />
 
-    /* Pulse Dots (Universal cross-browser opacity animation) */
-    .pulse-dot {
-      animation: nodePulse 2.5s ease-in-out infinite alternate;
-    }
-    .pulse-dot-delayed {
-      animation: nodePulse 3s ease-in-out 1.2s infinite alternate;
-    }
+  <!-- Ambient Glow Backgrounds -->
+  <circle cx="200" cy="100" r="180" fill="url(#glowGrad)" filter="url(#softGlow)" />
+  <circle cx="1000" cy="300" r="220" fill="url(#glowGrad)" filter="url(#softGlow)" />
 
-    @keyframes trafficFlow {
-      from { stroke-dashoffset: 600; }
-      to { stroke-dashoffset: 0; }
-    }
-    @keyframes trafficFlowRev {
-      from { stroke-dashoffset: -600; }
-      to { stroke-dashoffset: 0; }
-    }
-    @keyframes nodePulse {
-      0% { opacity: 0.3; }
-      100% { opacity: 1; }
-    }
+  <!-- Decorative Tech Grid -->
+  <g stroke="#ffffff" stroke-opacity="0.04" stroke-width="1">
+    <line x1="0" y1="50" x2="1200" y2="50" />
+    <line x1="0" y1="100" x2="1200" y2="100" />
+    <line x1="0" y1="150" x2="1200" y2="150" />
+    <line x1="0" y1="200" x2="1200" y2="200" />
+    <line x1="0" y1="250" x2="1200" y2="250" />
+    <line x1="0" y1="300" x2="1200" y2="300" />
+    <line x1="0" y1="350" x2="1200" y2="350" />
 
-    .badge-pill {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      font-size: 11px;
-      font-weight: 600;
-      letter-spacing: 0.6px;
-    }
-  </style>
-
-  <!-- Deep Solid Vector Background -->
-  <rect width="1200" height="360" fill="url(#bg-grad)" rx="16" />
-  <rect width="1200" height="360" fill="url(#cyber-grid)" rx="16" />
-
-  <!-- Ambient Light Orbs -->
-  <circle cx="160" cy="90" r="180" fill="url(#ambient-left)" />
-  <circle cx="1040" cy="270" r="200" fill="url(#ambient-right)" />
-  <circle cx="600" cy="180" r="260" fill="url(#ambient-center)" />
-
-  <!-- DYNAMIC TRAFFIC PIPELINES (L7 Gateway Ingress & Upstream Paths) -->
-  <g opacity="0.95">
-    <!-- Left Ingress Circuits -->
-    <path d="M 0 75 C 180 75, 220 145, 360 145" fill="none" stroke="#1e293b" stroke-width="2" />
-    <path d="M 0 75 C 180 75, 220 145, 360 145" fill="none" stroke="#38bdf8" stroke-width="2.5" class="stream-line" stroke-linecap="round" />
-
-    <path d="M 0 285 C 160 285, 200 215, 360 215" fill="none" stroke="#1e293b" stroke-width="2" />
-    <path d="M 0 285 C 160 285, 200 215, 360 215" fill="none" stroke="#818cf8" stroke-width="2.5" class="stream-line-fast" stroke-linecap="round" />
-
-    <!-- Right Egress / Upstream Circuits -->
-    <path d="M 840 145 C 980 145, 1020 75, 1200 75" fill="none" stroke="#1e293b" stroke-width="2" />
-    <path d="M 840 145 C 980 145, 1020 75, 1200 75" fill="none" stroke="#c084fc" stroke-width="2.5" class="stream-line" stroke-linecap="round" />
-
-    <path d="M 840 215 C 980 215, 1040 285, 1200 285" fill="none" stroke="#1e293b" stroke-width="2" />
-    <path d="M 840 215 C 980 215, 1040 285, 1200 285" fill="none" stroke="#38bdf8" stroke-width="2.5" class="stream-line-rev" stroke-linecap="round" />
-
-    <!-- Gateway Circuit Nodes with Multi-Ring Pulses (Pure SMIL Animations for flawless cross-browser support) -->
-    <!-- Node 1: (200, 75) -->
-    <circle cx="200" cy="75" r="4" fill="#38bdf8" class="pulse-dot" />
-    <circle cx="200" cy="75" r="5" fill="none" stroke="#38bdf8" stroke-width="1.5">
-      <animate attributeName="r" values="5;18" dur="2.4s" repeatCount="indefinite" />
-      <animate attributeName="opacity" values="0.8;0" dur="2.4s" repeatCount="indefinite" />
-    </circle>
-
-    <!-- Node 2: (180, 285) -->
-    <circle cx="180" cy="285" r="4" fill="#818cf8" class="pulse-dot-delayed" />
-    <circle cx="180" cy="285" r="5" fill="none" stroke="#818cf8" stroke-width="1.5">
-      <animate attributeName="r" values="5;18" dur="2.4s" begin="0.8s" repeatCount="indefinite" />
-      <animate attributeName="opacity" values="0.8;0" dur="2.4s" begin="0.8s" repeatCount="indefinite" />
-    </circle>
-
-    <!-- Node 3: (1020, 75) -->
-    <circle cx="1020" cy="75" r="4" fill="#c084fc" class="pulse-dot" />
-    <circle cx="1020" cy="75" r="5" fill="none" stroke="#c084fc" stroke-width="1.5">
-      <animate attributeName="r" values="5;18" dur="2.4s" begin="1.2s" repeatCount="indefinite" />
-      <animate attributeName="opacity" values="0.8;0" dur="2.4s" begin="1.2s" repeatCount="indefinite" />
-    </circle>
-
-    <!-- Node 4: (1040, 285) -->
-    <circle cx="1040" cy="285" r="4" fill="#38bdf8" class="pulse-dot-delayed" />
-    <circle cx="1040" cy="285" r="5" fill="none" stroke="#38bdf8" stroke-width="1.5">
-      <animate attributeName="r" values="5;18" dur="2.4s" begin="0.4s" repeatCount="indefinite" />
-      <animate attributeName="opacity" values="0.8;0" dur="2.4s" begin="0.4s" repeatCount="indefinite" />
-    </circle>
-
-    <!-- Central Routing Engine Status Pill -->
-    <g transform="translate(520, 275)">
-      <!-- Vector Shadow Layer (Clean offset rect) -->
-      <rect x="0" y="3" width="160" height="34" rx="17" fill="#000000" opacity="0.4" />
-      <rect x="0" y="0" width="160" height="34" rx="17" fill="#0b1329" stroke="#334155" stroke-width="1.5" />
-      <circle cx="22" cy="17" r="4" fill="#38bdf8" class="pulse-dot" />
-      <circle cx="80" cy="17" r="4" fill="#818cf8" class="pulse-dot-delayed" />
-      <circle cx="138" cy="17" r="4" fill="#c084fc" class="pulse-dot" />
-      <text x="80" y="21" fill="#94a3b8" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9" font-weight="700" letter-spacing="1.2">TRAFFIC ROUTED</text>
-    </g>
+    <line x1="150" y1="0" x2="150" y2="400" />
+    <line x1="300" y1="0" x2="300" y2="400" />
+    <line x1="450" y1="0" x2="450" y2="400" />
+    <line x1="600" y1="0" x2="600" y2="400" />
+    <line x1="750" y1="0" x2="750" y2="400" />
+    <line x1="900" y1="0" x2="900" y2="400" />
+    <line x1="1050" y1="0" x2="1050" y2="400" />
   </g>
 
-  <!-- FOREGROUND METADATA PILLS -->
-  <g transform="translate(600, 56)" text-anchor="middle">
-    <!-- Pill 1: Performance -->
-    <g transform="translate(-160, 0)">
-      <rect x="-65" y="-13" width="130" height="26" rx="13" fill="#1e293b" stroke="#38bdf8" stroke-width="1.2" />
-      <text y="4" fill="#38bdf8" class="badge-pill" text-anchor="middle">⚡ HIGH SPEED L7</text>
-    </g>
-    <!-- Pill 2: Security & Ingress -->
-    <g transform="translate(0, 0)">
-      <rect x="-80" y="-13" width="160" height="26" rx="13" fill="#1e293b" stroke="#818cf8" stroke-width="1.2" />
-      <text y="4" fill="#a5b4fc" class="badge-pill" text-anchor="middle">🛡️ SECURITY &amp; INGRESS</text>
-    </g>
-    <!-- Pill 3: OSS + Cloud -->
-    <g transform="translate(160, 0)">
-      <rect x="-70" y="-13" width="140" height="26" rx="13" fill="#1e293b" stroke="#c084fc" stroke-width="1.2" />
-      <text y="4" fill="#e9d5ff" class="badge-pill" text-anchor="middle">🌐 SAAS &amp; OPEN-SOURCE</text>
-    </g>
+  <!-- Glowing Abstract Network Nodes & Gateway Pipelines -->
+  <g stroke="url(#primaryGrad)" stroke-width="1.5" stroke-opacity="0.35" fill="none">
+    <path d="M 120,140 L 240,90 L 360,170 L 220,290 Z" />
+    <path d="M 960,110 L 1080,210 L 920,310 L 860,170 Z" />
+    <path d="M 480,70 L 720,70 L 600,160 Z" stroke-dasharray="6,6" />
+    <!-- Dynamic Traffic routing paths -->
+    <path d="M 0,200 Q 300,120 600,200 T 1200,200" stroke-width="2" stroke-opacity="0.2" />
   </g>
 
-  <!-- FOREGROUND MAIN TITLE & BRANDING (High Contrast, Robust Fallbacks) -->
-  <g text-anchor="middle">
-    <!-- Main Title -->
-    <text x="600" y="148" 
-          font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" 
-          font-size="46" 
-          font-weight="800" 
-          fill="url(#primary-glow)" 
-          letter-spacing="-0.5">
-      Awesome API Gateways
-    </text>
-
-    <!-- Subtitle / Tagline -->
-    <text x="600" y="190" 
-          font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" 
-          font-size="18" 
-          font-weight="500" 
-          fill="#cbd5e1" 
-          letter-spacing="0.2">
-      Curated Landscape of API Gateways, Ingress Controllers &amp; Traffic Management
-    </text>
-
-    <!-- Technology Keywords Footnote -->
-    <text x="600" y="228" 
-          font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" 
-          font-size="13" 
-          font-weight="500" 
-          fill="#94a3b8">
-      Traefik &bull; Kong &bull; Apache APISIX &bull; Envoy &bull; Tyk &bull; KrakenD &bull; HAProxy &bull; Caddy
-    </text>
+  <!-- Glowing Nodes/Vertices -->
+  <g fill="url(#primaryGrad)" filter="url(#glow)">
+    <circle cx="120" cy="140" r="6" />
+    <circle cx="240" cy="90" r="5" />
+    <circle cx="360" cy="170" r="6" />
+    <circle cx="220" cy="290" r="7" />
+    <circle cx="960" cy="110" r="5" />
+    <circle cx="1080" cy="210" r="7" />
+    <circle cx="920" cy="310" r="5" />
+    <circle cx="860" cy="170" r="6" />
+    <circle cx="480" cy="70" r="5" />
+    <circle cx="720" cy="70" r="5" />
   </g>
+
+  <!-- Central Content -->
+  <g transform="translate(600, 200)" text-anchor="middle">
+    <!-- Title Glow -->
+    <text y="-20" font-family="'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-weight="900" font-size="64" fill="url(#primaryGrad)" filter="url(#glow)" letter-spacing="3">AWESOME API GATEWAYS</text>
+    <!-- Title Main -->
+    <text y="-20" font-family="'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-weight="900" font-size="64" fill="#ffffff" letter-spacing="3">AWESOME API GATEWAYS</text>
+
+    <!-- Subtitle -->
+    <text y="45" font-family="'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-weight="600" font-size="20" fill="#9ca3af" letter-spacing="2">CURATED LIST OF API GATEWAYS, INGRESS CONTROLLERS &amp; REVERSE PROXIES</text>
+
+    <!-- Keywords Pill Tagline -->
+    <text y="80" font-family="'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-weight="500" font-size="14" fill="#38bdf8" letter-spacing="1.5">TRAFFIC MANAGEMENT &bull; CLOUD-NATIVE INGRESS &bull; API LIFECYCLE GOVERNANCE</text>
+
+    <!-- Decorative Border/Line below title -->
+    <rect x="-260" y="105" width="520" height="4" rx="2" fill="url(#primaryGrad)" filter="url(#glow)" />
+  </g>
+
+  <!-- Floating Tech Symbols / Ingress Routing Visuals -->
+  <!-- Left Ingress Bracket < / > -->
+  <path d="M 80,180 L 50,200 L 80,220" stroke="url(#primaryGrad)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" fill="none" filter="url(#glow)" />
+  <path d="M 1120,180 L 1150,200 L 1120,220" stroke="url(#primaryGrad)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" fill="none" filter="url(#glow)" />
+  <path d="M 95,170 L 75,230 M 1105,170 L 1085,230" stroke="#9ca3af" stroke-width="4" stroke-linecap="round" fill="none" />
 </svg>

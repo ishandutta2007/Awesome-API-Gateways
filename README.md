@@ -1,8 +1,8 @@
 # 🌐 Awesome API Gateways & Ingress Controllers
 
-<p align="center">
-  <img src="assets/banner.svg" alt="Awesome API Gateways Banner" width="100%" />
-</p>
+<div align="center">
+
+<img src="assets/banner.svg" alt="Awesome API Gateways Banner" width="100%">
 
 <p align="center">
   <strong>Curated Directory of Enterprise SaaS Solutions & High-Performance Open-Source API Gateways</strong><br>
