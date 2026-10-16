@@ -66,7 +66,7 @@ Rather than being a winner-take-all monopoly, the sector exhibits **moderate fra
 
 ## 🔓 Open-Source GitHub Projects
 
-Curated open-source API gateways and cloud-native proxies, sorted by GitHub Stars_Count (descending):
+Curated open-source API gateways and cloud-native proxies, sorted by GitHub_Stars_Count (descending):
 
 1. **[Caddy](https://github.com/caddyserver/caddy)** [![GitHub_Stars](https://img.shields.io/github/stars/caddyserver/caddy?style=social&color=white)](https://github.com/caddyserver/caddy/stargazers)  
    **Fast, multi-platform, extensible HTTP/1-2-3 web server & reverse proxy with automatic HTTPS** (Apache-2.0). Written in Go with zero runtime dependencies. Dynamically configurable via JSON REST API or Caddyfile. Ideal as an ultra-fast modern reverse proxy, ingress point, and TLS terminating gateway.
@@ -148,7 +148,7 @@ Contributions are warmly welcomed! Help keep this ecosystem guide comprehensive,
 1. 🍴 Fork the repository.
 2. 🌿 Create a descriptive feature branch (`git checkout -b feature/add-gateway`).
 3. 📝 Add or update entries following the established table or badge list format.
-4. 🔗 Ensure all URLs, GitHub Stars_Badges, and pricing tiers are accurate and verified.
+4. 🔗 Ensure all URLs, GitHub_Stars_Badges, and pricing tiers are accurate and verified.
 5. 🚀 Submit a Pull Request with a clear explanation of your additions.
 
 ⭐ **If this repository helps you make better architecture decisions, please give it a star!**
