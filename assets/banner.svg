@@ -2,12 +2,12 @@
   <defs>
     <!-- Background Gradient -->
     <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0a0f1d" />
-      <stop offset="50%" stop-color="#0f172a" />
+      <stop offset="0%" stop-color="#070c18" />
+      <stop offset="50%" stop-color="#0c1527" />
       <stop offset="100%" stop-color="#020617" />
     </linearGradient>
 
-    <!-- Glowing Accent Gradients -->
+    <!-- Glowing Text Accent Gradient -->
     <linearGradient id="primary-glow" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#38bdf8" />
       <stop offset="50%" stop-color="#818cf8" />
@@ -19,28 +19,37 @@
       <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="0.75" stroke-opacity="0.6" />
     </pattern>
 
-    <!-- Native SVG Drop Shadow for Badges & Cards -->
-    <filter id="card-shadow" x="-20%" y="-20%" width="140%" height="140%">
-      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.5" />
-    </filter>
+    <!-- Pure SVG Radial Gradients for Ambient Glows (No raster filters) -->
+    <radialGradient id="ambient-left" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#0284c7" stop-opacity="0.28" />
+      <stop offset="100%" stop-color="#0284c7" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="ambient-right" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#7c3aed" stop-opacity="0.25" />
+      <stop offset="100%" stop-color="#7c3aed" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="ambient-center" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.12" />
+      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0" />
+    </radialGradient>
   </defs>
 
   <style>
-    /* Traffic Stream Animations */
+    /* Traffic Stream Vector Animations (100% vector-safe) */
     .stream-line {
-      stroke-dasharray: 16 200;
+      stroke-dasharray: 16 220;
       animation: trafficFlow 6s linear infinite;
     }
     .stream-line-fast {
-      stroke-dasharray: 24 240;
-      animation: trafficFlow 4s linear infinite;
+      stroke-dasharray: 24 260;
+      animation: trafficFlow 4.5s linear infinite;
     }
     .stream-line-rev {
-      stroke-dasharray: 20 180;
+      stroke-dasharray: 20 200;
       animation: trafficFlowRev 5s linear infinite;
     }
 
-    /* Pulse Node Animations */
+    /* Pulse Dots */
     .pulse-dot {
       animation: nodePulse 2.5s ease-in-out infinite alternate;
     }
@@ -48,7 +57,7 @@
       animation: nodePulse 3s ease-in-out 1.2s infinite alternate;
     }
 
-    /* Pulse Glow Rings */
+    /* Expanding Pulse Rings */
     .pulse-ring {
       animation: ringExpand 3s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
       transform-origin: center;
@@ -63,7 +72,7 @@
       to { stroke-dashoffset: 0; }
     }
     @keyframes nodePulse {
-      0% { opacity: 0.4; }
+      0% { opacity: 0.35; }
       100% { opacity: 1; }
     }
     @keyframes ringExpand {
@@ -79,30 +88,17 @@
     }
   </style>
 
-  <!-- Deep Background -->
+  <!-- Deep Solid Vector Background -->
   <rect width="1200" height="360" fill="url(#bg-grad)" rx="16" />
   <rect width="1200" height="360" fill="url(#cyber-grid)" rx="16" />
 
-  <!-- Ambient Light Radial Glows (Pure SVG radial gradients for 100% compatibility) -->
-  <radialGradient id="ambient-left" cx="50%" cy="50%" r="50%">
-    <stop offset="0%" stop-color="#0284c7" stop-opacity="0.25" />
-    <stop offset="100%" stop-color="#0284c7" stop-opacity="0" />
-  </radialGradient>
-  <radialGradient id="ambient-right" cx="50%" cy="50%" r="50%">
-    <stop offset="0%" stop-color="#7c3aed" stop-opacity="0.25" />
-    <stop offset="100%" stop-color="#7c3aed" stop-opacity="0" />
-  </radialGradient>
-  <radialGradient id="ambient-center" cx="50%" cy="50%" r="50%">
-    <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.15" />
-    <stop offset="100%" stop-color="#38bdf8" stop-opacity="0" />
-  </radialGradient>
-
+  <!-- Ambient Light Orbs -->
   <circle cx="160" cy="90" r="180" fill="url(#ambient-left)" />
   <circle cx="1040" cy="270" r="200" fill="url(#ambient-right)" />
   <circle cx="600" cy="180" r="260" fill="url(#ambient-center)" />
 
-  <!-- DYNAMIC TRAFFIC PIPELINES (Clean L7 Routing Visuals) -->
-  <g opacity="0.9">
+  <!-- DYNAMIC TRAFFIC PIPELINES (L7 Gateway Ingress & Upstream Paths) -->
+  <g opacity="0.95">
     <!-- Left Ingress Circuits -->
     <path d="M 0 75 C 180 75, 220 145, 360 145" fill="none" stroke="#1e293b" stroke-width="2" />
     <path d="M 0 75 C 180 75, 220 145, 360 145" fill="none" stroke="#38bdf8" stroke-width="2.5" class="stream-line" stroke-linecap="round" />
@@ -130,8 +126,10 @@
     <circle cx="1040" cy="285" r="6" fill="none" stroke="#38bdf8" class="pulse-ring" />
     <circle cx="1040" cy="285" r="4" fill="#38bdf8" class="pulse-dot-delayed" />
 
-    <!-- Central Routing Engine Hub -->
-    <g transform="translate(520, 275)" filter="url(#card-shadow)">
+    <!-- Central Routing Engine Status Pill -->
+    <g transform="translate(520, 275)">
+      <!-- Vector Shadow Layer (Clean offset rect) -->
+      <rect x="0" y="3" width="160" height="34" rx="17" fill="#000000" opacity="0.4" />
       <rect x="0" y="0" width="160" height="34" rx="17" fill="#0b1329" stroke="#334155" stroke-width="1.5" />
       <circle cx="22" cy="17" r="4" fill="#38bdf8" class="pulse-dot" />
       <circle cx="80" cy="17" r="4" fill="#818cf8" class="pulse-dot-delayed" />
@@ -159,11 +157,11 @@
     </g>
   </g>
 
-  <!-- FOREGROUND MAIN TITLE & BRANDING (High Contrast, Guaranteed Rendering) -->
+  <!-- FOREGROUND MAIN TITLE & BRANDING (High Contrast, Robust Fallbacks) -->
   <g text-anchor="middle">
     <!-- Main Title -->
     <text x="600" y="148" 
-          font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" 
+          font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" 
           font-size="46" 
           font-weight="800" 
           fill="url(#primary-glow)" 
@@ -173,7 +171,7 @@
 
     <!-- Subtitle / Tagline -->
     <text x="600" y="190" 
-          font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" 
+          font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" 
           font-size="18" 
           font-weight="500" 
           fill="#cbd5e1" 
