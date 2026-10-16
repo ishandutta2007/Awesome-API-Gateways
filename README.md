@@ -66,66 +66,66 @@ Rather than being a winner-take-all monopoly, the sector exhibits **moderate fra
 
 ## 🔓 Open-Source GitHub Projects
 
-Curated open-source API gateways and cloud-native proxies, sorted by GitHub star count (descending):
+Curated open-source API gateways and cloud-native proxies, sorted by GitHub Stars_Count (descending):
 
-1. **[Caddy](https://github.com/caddyserver/caddy)** [![GitHub stars](https://img.shields.io/github/stars/caddyserver/caddy?style=social&color=white)](https://github.com/caddyserver/caddy/stargazers)  
+1. **[Caddy](https://github.com/caddyserver/caddy)** [![GitHub_Stars](https://img.shields.io/github/stars/caddyserver/caddy?style=social&color=white)](https://github.com/caddyserver/caddy/stargazers)  
    **Fast, multi-platform, extensible HTTP/1-2-3 web server & reverse proxy with automatic HTTPS** (Apache-2.0). Written in Go with zero runtime dependencies. Dynamically configurable via JSON REST API or Caddyfile. Ideal as an ultra-fast modern reverse proxy, ingress point, and TLS terminating gateway.
 
-2. **[Traefik](https://github.com/traefik/traefik)** [![GitHub stars](https://img.shields.io/github/stars/traefik/traefik?style=social&color=white)](https://github.com/traefik/traefik/stargazers)  
+2. **[Traefik](https://github.com/traefik/traefik)** [![GitHub_Stars](https://img.shields.io/github/stars/traefik/traefik?style=social&color=white)](https://github.com/traefik/traefik/stargazers)  
    **The Cloud Native Application Proxy** (MIT). Listens to orchestrator APIs (Docker, Swarm, Kubernetes, ECS, Consul, Etcd) and auto-discovers routes dynamically without restarts. Features automatic Let's Encrypt HTTPS, circuit breakers, retries, and native gRPC/WebSocket routing.
 
-3. **[Kong Gateway](https://github.com/Kong/kong)** [![GitHub stars](https://img.shields.io/github/stars/Kong/kong?style=social&color=white)](https://github.com/Kong/kong/stargazers)  
+3. **[Kong Gateway](https://github.com/Kong/kong)** [![GitHub_Stars](https://img.shields.io/github/stars/Kong/kong?style=social&color=white)](https://github.com/Kong/kong/stargazers)  
    **The most widely adopted open-source cloud-native API gateway** (Apache-2.0). Built on NGINX/OpenResty (Lua) supporting both PostgreSQL-backed and lightweight DB-less / declarative GitOps (decK) configurations. Offers 100+ community and enterprise plugins for authentication, rate limiting, logging, and transformations.
 
-4. **[Envoy Proxy](https://github.com/envoyproxy/envoy)** [![GitHub stars](https://img.shields.io/github/stars/envoyproxy/envoy?style=social&color=white)](https://github.com/envoyproxy/envoy/stargazers)  
+4. **[Envoy Proxy](https://github.com/envoyproxy/envoy)** [![GitHub_Stars](https://img.shields.io/github/stars/envoyproxy/envoy?style=social&color=white)](https://github.com/envoyproxy/envoy/stargazers)  
    **CNCF Graduated high-performance L4/L7 edge and service proxy** (Apache-2.0). Written in C++ for maximum throughput and low latency. Features dynamic configuration via xDS gRPC APIs, advanced load balancing, distributed tracing, and serves as the data-plane engine powering modern gateways.
 
-5. **[Apache APISIX](https://github.com/apache/apisix)** [![GitHub stars](https://img.shields.io/github/stars/apache/apisix?style=social&color=white)](https://github.com/apache/apisix/stargazers)  
+5. **[Apache APISIX](https://github.com/apache/apisix)** [![GitHub_Stars](https://img.shields.io/github/stars/apache/apisix?style=social&color=white)](https://github.com/apache/apisix/stargazers)  
    **Dynamic, real-time, high-performance cloud-native API gateway** (Apache-2.0). Built on Nginx and etcd with hitless dynamic reloads. Provides multi-protocol routing (HTTP, gRPC, WebSocket, MQTT, Dubbo), canary rollouts, active health checks, and a rich multilingual plugin ecosystem (Lua, Go, Python, Wasm).
 
-6. **[Netflix Zuul](https://github.com/Netflix/zuul)** [![GitHub stars](https://img.shields.io/github/stars/Netflix/zuul?style=social&color=white)](https://github.com/Netflix/zuul/stargazers)  
+6. **[Netflix Zuul](https://github.com/Netflix/zuul)** [![GitHub_Stars](https://img.shields.io/github/stars/Netflix/zuul?style=social&color=white)](https://github.com/Netflix/zuul/stargazers)  
    **L7 application gateway and edge service** (Apache-2.0). Powers Netflix's global streaming edge with asynchronous, non-blocking Netty core. Provides dynamic filter routing, security inspection, load shedding, and canary testing across complex JVM topologies.
 
-7. **[Tyk Gateway](https://github.com/TykTechnologies/tyk)** [![GitHub stars](https://img.shields.io/github/stars/TykTechnologies/tyk?style=social&color=white)](https://github.com/TykTechnologies/tyk/stargazers)  
+7. **[Tyk Gateway](https://github.com/TykTechnologies/tyk)** [![GitHub_Stars](https://img.shields.io/github/stars/TykTechnologies/tyk?style=social&color=white)](https://github.com/TykTechnologies/tyk/stargazers)  
    **Batteries-included open-source enterprise API gateway** (MPL-2.0). Written in Go with Redis as its only dependency. No feature gating across runtimes; provides OpenAPI 3.0-first routing, mutual TLS, HMAC authorization, hitless reloads, and custom middleware in Go, JavaScript, Python, or gRPC.
 
-8. **[Alibaba Higress](https://github.com/alibaba/higress)** [![GitHub stars](https://img.shields.io/github/stars/alibaba/higress?style=social&color=white)](https://github.com/alibaba/higress/stargazers)  
+8. **[Alibaba Higress](https://github.com/alibaba/higress)** [![GitHub_Stars](https://img.shields.io/github/stars/alibaba/higress?style=social&color=white)](https://github.com/alibaba/higress/stargazers)  
    **Next-generation cloud-native AI & API gateway** (Apache-2.0). Built on Envoy and Istio core to unify Kubernetes Ingress, microservices gateways, and LLM/AI token rate limiting and prompt management into a single declarative data plane.
 
-9. **[Fabio](https://github.com/fabiolb/fabio)** [![GitHub stars](https://img.shields.io/github/stars/fabiolb/fabio?style=social&color=white)](https://github.com/fabiolb/fabio/stargazers)  
+9. **[Fabio](https://github.com/fabiolb/fabio)** [![GitHub_Stars](https://img.shields.io/github/stars/fabiolb/fabio?style=social&color=white)](https://github.com/fabiolb/fabio/stargazers)  
    **Zero-configuration, ultra-fast HTTP(S) and TCP router for HashiCorp Consul** (MIT). Automatically inspects Consul service health tags to register and balance routes in real-time without reloads.
 
-10. **[HAProxy](https://github.com/haproxy/haproxy)** [![GitHub stars](https://img.shields.io/github/stars/haproxy/haproxy?style=social&color=white)](https://github.com/haproxy/haproxy/stargazers)  
+10. **[HAProxy](https://github.com/haproxy/haproxy)** [![GitHub_Stars](https://img.shields.io/github/stars/haproxy/haproxy?style=social&color=white)](https://github.com/haproxy/haproxy/stargazers)  
     **The gold standard high-performance TCP/HTTP load balancer and reverse proxy** (GPL-2.0). Renowned for rock-solid reliability, multi-core connection handling, millisecond latency guarantees, and deep observability stats.
 
-11. **[Lura Project (KrakenD Framework)](https://github.com/luraproject/lura)** [![GitHub stars](https://img.shields.io/github/stars/luraproject/lura?style=social&color=white)](https://github.com/luraproject/lura/stargazers)  
+11. **[Lura Project (KrakenD Framework)](https://github.com/luraproject/lura)** [![GitHub_Stars](https://img.shields.io/github/stars/luraproject/lura?style=social&color=white)](https://github.com/luraproject/lura/stargazers)  
     **Ultra-high-performance stateless API gateway framework** (Apache-2.0, Linux Foundation). The core engine behind KrakenD. Specializes in backend response aggregation, payload transformation, manipulation, and filtering with zero database dependencies.
 
-12. **[Spring Cloud Gateway](https://github.com/spring-cloud/spring-cloud-gateway)** [![GitHub stars](https://img.shields.io/github/stars/spring-cloud/spring-cloud-gateway?style=social&color=white)](https://github.com/spring-cloud/spring-cloud-gateway/stargazers)  
+12. **[Spring Cloud Gateway](https://github.com/spring-cloud/spring-cloud-gateway)** [![GitHub_Stars](https://img.shields.io/github/stars/spring-cloud/spring-cloud-gateway?style=social&color=white)](https://github.com/spring-cloud/spring-cloud-gateway/stargazers)  
     **Reactive, non-blocking API gateway built for Spring Boot and Java ecosystems** (Apache-2.0). Built on Project Reactor and Netty to provide fine-grained predicate matching, circuit breaking via Resilience4j, and seamless Spring Security integration.
 
-13. **[Emissary-ingress](https://github.com/emissary-ingress/emissary)** [![GitHub stars](https://img.shields.io/github/stars/emissary-ingress/emissary?style=social&color=white)](https://github.com/emissary-ingress/emissary/stargazers)  
+13. **[Emissary-ingress](https://github.com/emissary-ingress/emissary)** [![GitHub_Stars](https://img.shields.io/github/stars/emissary-ingress/emissary?style=social&color=white)](https://github.com/emissary-ingress/emissary/stargazers)  
     **CNCF Incubating Kubernetes-native ingress controller & gateway built on Envoy** (Apache-2.0). Declarative CRD-driven routing (`Mapping`, `Listener`) engineered for developer self-service and GitOps delivery.
 
-14. **[Envoy Gateway](https://github.com/envoyproxy/gateway)** [![GitHub stars](https://img.shields.io/github/stars/envoyproxy/gateway?style=social&color=white)](https://github.com/envoyproxy/gateway/stargazers)  
+14. **[Envoy Gateway](https://github.com/envoyproxy/gateway)** [![GitHub_Stars](https://img.shields.io/github/stars/envoyproxy/gateway?style=social&color=white)](https://github.com/envoyproxy/gateway/stargazers)  
     **Official Kubernetes Gateway API implementation powered by Envoy Proxy** (Apache-2.0). Native CRDs (`GatewayClass`, `HTTPRoute`, `BackendTrafficPolicy`) delivering standardized Kubernetes ingress with per-backend circuit breakers and rate limiting.
 
-15. **[Express Gateway](https://github.com/ExpressGateway/express-gateway)** [![GitHub stars](https://img.shields.io/github/stars/ExpressGateway/express-gateway?style=social&color=white)](https://github.com/ExpressGateway/express-gateway/stargazers)  
+15. **[Express Gateway](https://github.com/ExpressGateway/express-gateway)** [![GitHub_Stars](https://img.shields.io/github/stars/ExpressGateway/express-gateway?style=social&color=white)](https://github.com/ExpressGateway/express-gateway/stargazers)  
     **Microservices API Gateway built completely on Express.js and Node.js** (Apache-2.0). Configured via YAML declarations with plug-and-play middleware policies for Key Auth, OAuth2, Rate Limiting, and CORS.
 
-16. **[Kong Kubernetes Ingress Controller](https://github.com/Kong/kubernetes-ingress-controller)** [![GitHub stars](https://img.shields.io/github/stars/Kong/kubernetes-ingress-controller?style=social&color=white)](https://github.com/Kong/kubernetes-ingress-controller/stargazers)  
+16. **[Kong Kubernetes Ingress Controller](https://github.com/Kong/kubernetes-ingress-controller)** [![GitHub_Stars](https://img.shields.io/github/stars/Kong/kubernetes-ingress-controller?style=social&color=white)](https://github.com/Kong/kubernetes-ingress-controller/stargazers)  
     **Kubernetes Ingress Controller powered by Kong Gateway** (Apache-2.0). Connects Kubernetes native services, Ingress, and Gateway API resources directly with Kong's plugin ecosystem.
 
-17. **[KrakenD CE](https://github.com/krakend/krakend-ce)** [![GitHub stars](https://img.shields.io/github/stars/krakend/krakend-ce?style=social&color=white)](https://github.com/krakend/krakend-ce/stargazers)  
+17. **[KrakenD CE](https://github.com/krakend/krakend-ce)** [![GitHub_Stars](https://img.shields.io/github/stars/krakend/krakend-ce?style=social&color=white)](https://github.com/krakend/krakend-ce/stargazers)  
     **Community Edition binary distribution of the KrakenD API Gateway** (Apache-2.0). Packaged with standard enterprise-grade middleware, OpenAPI validators, caching, and rate limiters delivering up to 80,000 RPS per node.
 
-18. **[Traefik Mesh](https://github.com/traefik/mesh)** [![GitHub stars](https://img.shields.io/github/stars/traefik/mesh?style=social&color=white)](https://github.com/traefik/mesh/stargazers)  
+18. **[Traefik Mesh](https://github.com/traefik/mesh)** [![GitHub_Stars](https://img.shields.io/github/stars/traefik/mesh?style=social&color=white)](https://github.com/traefik/mesh/stargazers)  
     **Lightweight, straightforward service mesh** (Apache-2.0). Built on Traefik Proxy to control and secure east-west microservice traffic with SMI (Service Mesh Interface) specification compliance.
 
-19. **[Apache APISIX Dashboard](https://github.com/apache/apisix-dashboard)** [![GitHub stars](https://img.shields.io/github/stars/apache/apisix-dashboard?style=social&color=white)](https://github.com/apache/apisix-dashboard/stargazers)  
+19. **[Apache APISIX Dashboard](https://github.com/apache/apisix-dashboard)** [![GitHub_Stars](https://img.shields.io/github/stars/apache/apisix-dashboard?style=social&color=white)](https://github.com/apache/apisix-dashboard/stargazers)  
     **Official web UI and visual management dashboard for Apache APISIX** (Apache-2.0). Simplifies configuring routes, upstreams, SSL certificates, consumer credentials, and plugin configurations.
 
-20. **[WSO2 API Manager Core (OSS)](https://github.com/wso2/product-apim)** [![GitHub stars](https://img.shields.io/github/stars/wso2/product-apim?style=social&color=white)](https://github.com/wso2/product-apim/stargazers)  
+20. **[WSO2 API Manager Core (OSS)](https://github.com/wso2/product-apim)** [![GitHub_Stars](https://img.shields.io/github/stars/wso2/product-apim?style=social&color=white)](https://github.com/wso2/product-apim/stargazers)  
     **Complete open-source enterprise API lifecycle management suite** (Apache-2.0). Provides API Publisher, Developer Portal, Gateway, and Analytics for REST, GraphQL, WebSocket, and streaming events.
 
 ---
@@ -148,7 +148,7 @@ Contributions are warmly welcomed! Help keep this ecosystem guide comprehensive,
 1. 🍴 Fork the repository.
 2. 🌿 Create a descriptive feature branch (`git checkout -b feature/add-gateway`).
 3. 📝 Add or update entries following the established table or badge list format.
-4. 🔗 Ensure all URLs, GitHub star badges, and pricing tiers are accurate and verified.
+4. 🔗 Ensure all URLs, GitHub Stars_Badges, and pricing tiers are accurate and verified.
 5. 🚀 Submit a Pull Request with a clear explanation of your additions.
 
 ⭐ **If this repository helps you make better architecture decisions, please give it a star!**
